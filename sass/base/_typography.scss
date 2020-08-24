@@ -6,48 +6,6 @@ body {
     color: $color-grey-dark;
 }
 
-.heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
-    backface-visibility: hidden; // for solving glitches at the end of an animation
-    margin-bottom: 6rem;
-
-    &--main {
-        display: block;
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
-        
-        animation-name: moveInLeft;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-        
-        @include respond(phone) {    // width < 600?
-            letter-spacing: 1rem;
-            font-size: 5rem;         
-        }
-
-        /* 
-        animation-delay: 3s; 
-        animation-iteration-count: 3;
-        */
-    }
-
-    &--sub {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 1.74rem;
-    
-        animation: moveInRight 1s ease-in-out;
-
-        @include respond(phone) {    // width < 600?
-            letter-spacing: .5rem;        
-        }
-        
-    }
-
-}
 
 .heading-secondary {
     font-size: 3.5rem;
@@ -87,3 +45,37 @@ body {
         margin-bottom: 3rem;
     }
 }
+
+.videoMessage .spacer1 {
+    font-size: 2.5vw;
+    color:white;
+    position: relative;
+    padding: 10vw 0 0 9vw;
+    font-style: italic;
+    opacity: 0.95;
+  }
+
+  .videoMessage .spacer2 {
+    font-size: 5vw;
+    font-weight: 700;
+    color:white;
+    position: relative;
+    text-align: center;
+    padding: 2vw 0 0 0;
+    opacity: 0.95;
+  }
+
+  .videoMessage .spacer3 {
+    font-size: 1.6vw;
+    color:rgb(10, 10, 10);
+    position: relative;
+    top: 7px;
+    margin: 0 14vw 0 24vw;
+    /* padding: 0vw 1vw 0vw 2vw; */
+    left: 5vw;
+    line-height: 2vw;
+    font-weight: 400;
+    text-shadow: none;
+    text-align: center;
+  }
+  

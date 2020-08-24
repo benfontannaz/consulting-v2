@@ -118,7 +118,7 @@
     
         }
 
-        @include respond(big-desk) {    // width < 900?
+        @include respond(desk-big) {    // width < 900?
             margin: 2rem 0 2rem 0;
     
         }

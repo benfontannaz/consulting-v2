@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- 
+        HEAD ---------------------------------------------------------- -->
     <head>
         <meta charset="UTF-8">
+        <meta name="author" content="Fontannaz Benjamin" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+        
+        
+        <meta name="keywords" content="fontannaz consulting services enterprise solution architecture strategy business analysis analytics tableau salesforce data-science development financial planning digital workplace innovation design cloud aws azure virtualization UI UX user experience interface web design html css sass bootstrap javascript" />
+        <meta name="description" content="Fontannaz Consulting - TO BE REVISED"/>
+
+        <title>Fontannaz Consulting v2</title>
+
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="./img/favicon/favicon-head-1.png">
+        <link rel="apple-touch-icon" href="./img/favicon/apple-touch-knight2-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-touch-knight2-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-touch-knight2-icon-114x114.png">
+
 
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
         <!-- Scripts -->
-        <!-- jQuery required by the script used to close the navigation button when clicking on a link  -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         
-        <!-- link CSS Stylesheet + Shortcut Icon-->
+        <script src="//code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+        
+        <!-- Parallax Window Required Java script -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+        <!-- <script async data-id="37759" src="https://cdn.widgetwhats.com/script.min.js"></script> -->
+        
+        <!-- CSS Plugins -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
         <link rel="stylesheet" href="./css/icon-linea-fonts.css">
+        <link rel="stylesheet" href="./css/plugins.css" />
+
+        <!-- CSS Stylesheet + Shortcut Icon-->
+        <link rel="shortcut icon" type="image/png" href="./img/favicon/favicon-head-1.png">
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
-               
-        <title>Natours | Exciting tours for adventurous people</title>
-        
+
     </head>
+
+    <!-- 
+    BODY -------------------------------------------------------------------- -->
     <body>
+
+        <!-- 
+        PRELOADER ---------------------------------------------------------- -->
+        <div id="preloader">
+            <div class="row preloader__loader">
+                <div class="preloader__loader--icon"></div>
+            </div>
+        </div>
 
         <!-- 
         NAVIGATION ---------------------------------------------------------- -->
@@ -31,11 +67,12 @@
             <div class="navigation__background">&nbsp;</div>
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>01</span>About Natours</a></li>
-                    <li class="navigation__item"><a href="#section-features" class="navigation__link"><span>02</span>Your Benefits</a></li>
-                    <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>03</span>Popular Tours</a></li>
-                    <li class="navigation__item"><a href="#section-stories" class="navigation__link"><span>04</span>Stories</a></li>
-                    <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>05</span>Book Now</a></li>
+                    <li class="navigation__item"><a href="#navigation" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#section-services" class="navigation__link">Services</a></li>
+                    <li class="navigation__item"><a href="#section-testimonials" class="navigation__link">Testimonials</a></li>
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link">About Me</a></li>
+                    <li class="navigation__item"><a href="#section-contact" class="navigation__link">Let's Talk</a></li>
+                    <!-- <li class="navigation__item"><a href="#section-features" class="navigation__link">Your Benefits</a></li> -->
                 </ul>
             </nav>
         </div>
@@ -44,16 +81,32 @@
         HEADER ---------------------------------------------------------- -->
         <header class="header">
             <div class="header__logo-box">
-                <img src="./img/logo-white.png" alt="logo" class="header__logo">
+                <a class="logo" href="javascript:void(0);">
+                    <img src="./img/logo/il_1140xN.1354376709_tby7_002_Cropped.png" alt="logo" class="header__logo" title="Fontannaz Consulting Logo Light">
+                </a>
+                
             </div>
+            <div class="header__ben-only"></div>
 
             <div class="header__text-box">
                 <h1 class="heading-primary">
-                    <span class="heading-primary--main">Outdoors</span>
-                    <span class="heading-primary--sub">is where life happens</span>
+                    <span class="heading-primary--main heading-primary--main-1 spacer1 animated">Imagining, Thinking and Building</span>
+                    <span class="heading-primary--main heading-primary--main-2 spacer2 animated">Your digital future</span>
+                    <span class="span-spacer3 display__desktop">
+                        <h2 class="heading-primary--main heading-primary--main-3 spacer3 animated ">Strategy | Business Development | Innovation | Analytics | Architecture</h2>
+                    </span>
+                    <span class="span-spacer3 display__tab-land">
+                        <h2 class="heading-primary--main heading-primary--main-3 spacer3 animated ">Strategy | Innovation | Analytics | Architecture</h2>
+                    </span>
+                    <!-- <span class="heading-primary--sub">supporting companies on strategy, innovation, analytics, new technologies, user ecperience and enterprise architecture through a lean and agile approach.
+                    </span> -->
                 </h1>
-                <a href="#section-tours" class="btn btn--white btn--white-animated">Discover our tours</a>
+
             </div>
+            <div class="heading-primary--main-4">
+                <a href="#section-tours" class="btn btn--white btn--white-animated-header">Learn More</a>
+            </div>
+            <div  class="header__stack-top"></div>
         </header>
 
         <!-- 
@@ -61,13 +114,520 @@
         <main>
 
             <!-- 
-            SECTION ABOUT --------------------------------------------- -->
-            <section class="section-about" id="section-about">
+            SECTION SERVICES --------------------------------------------- -->
+            <section class="section-services" id="section-services">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
-                        Exiting tours for adventurous people
+                        IT Consulting Services
                     </h2>
                 </div>
+
+                <div class="row services">
+
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front card__side--front-1">
+                                <div class="card__picture card__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">Strategy Consulting</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>3 day tour</li>
+                                        <li>Up to 30 people</li>
+                                        <li>2 tour guides</li>
+                                        <li>Sleep in cozy hotels</li>
+                                        <li>Difficulty: very easy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">$297</p>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front card__side--front-2">
+                                <div class="card__picture card__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">EA Sprint Workshop</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>3-5 days workshop</li>
+                                        <li>up to 15 participants</li>
+                                        <li>6 tour guides</li>
+                                        <li></li>
+                                        <li>On Demand</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-2">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">$497</p>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front card__side--front-3">
+                                <div class="card__picture card__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">Digital Worplace</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>5 days tour</li>
+                                        <li>Up to 15 people</li>
+                                        <li>3 tour guides</li>
+                                        <li>Sleep in provided tents</li>
+                                        <li>Difficulty: hard</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card__side card__side--back card__side--back-3">
+                                <div class="card__cta">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">Only</p>
+                                        <p class="card__price-value">$897</p>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="u-center-text u-margin-top-huge">
+                    <a href="#" class="btn btn--green">Discover all Services</a>
+                </div>
+
+            </section>
+
+            <!-- 
+            SECTION TESTIMONIALS --------------------------------------------- -->
+            <section class="section-testimonials" id="section-testimonials">
+
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="./img/video.mp4" type="video/mp4">
+                        <source src="./img/video.webm" type="video/webm">
+                        Your browser is not supported!
+                    </video>
+                </div>
+                <div class="testimonials__stack-top"></div>
+
+                <div class="u-center-text u-margin-bottom-big testimonials__index">
+                    <h2 class="heading-secondary testimonials__z-index">
+                        Testimonials
+                    </h2> 
+                </div>
+
+                <div class="row">
+                    <div class="testimonials">
+                        <figure class="testimonials__shape">
+                            <img src="./img/nat-8.jpg" alt="Person on a tour" class="testimonials__image">
+                            <figcation class="testimonials__caption">Mary Smith</figcation>
+                        </figure>
+                        <div class="testimonials__text">
+                            <h3 class="heading-tertiary">I had the best week ever with my family</h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio harum iste incidunt in quos aperiam dolorum sint placeat nesciunt eaque nihil quasi iure accusantium aut autem voluptatibus tempore sapiente libero itaque rerum atque, aliquid neque! Perferendis, laboriosam eligendi. Amet!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="testimonials">
+                        <figure class="testimonials__shape">
+                            <img src="./img/nat-9.jpg" alt="Person on a tour" class="testimonials__image">
+                            <figcation class="testimonials__caption">Jack Wilson</figcation>
+                        </figure>
+                        <div class="testimonials__text">
+                            <h3 class="heading-tertiary">WOW ! My life is completly different now</h3>
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio harum iste incidunt in quos aperiam dolorum sint placeat nesciunt eaque nihil quasi iure accusantium aut autem voluptatibus tempore sapiente libero itaque rerum atque, aliquid neque! Perferendis, laboriosam eligendi. Amet!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="u-center-text u-margin-top-huge ">
+                    <a href="#" class="btn-text testimonials__index">Read all stories &rarr;</a>
+                </div>
+                
+
+
+            </section>
+
+            <!-- 
+            SECTION ABOUT --------------------------------------------- -->
+            <section class="section-about " id="section-about">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary about-scroll-0">
+                        About Me
+                    </h2>
+                </div>
+
+                
+                <!-- END Start left and right Scrolling Banner Container -->
+
+
+                <!-- 
+                SECTION ABOUT --------------------------------------------- -->
+                <!-- <div class="row">
+                    <div class="col-12 center-col margin-40px-bottom sm-margin-30px-bottom xs-margin-30px-bottom xl-padding-100px-bottom text-center">
+                        <h2 class="font-size34 md-font-size30 sm-font-size26 xs-font-size24 font-weight-700 style2 about-scroll-0">About Me</h2>
+                    </div>
+                </div> -->
+    
+                <!-- start about me section-->
+                <!-- <div class="sm-margin-30px-bottom"> -->
+                    <!-- about-box start -->
+                    <!-- <div class="about-box d-none">
+                        <div class="porfile-photo" data-overlay-dark="3" >
+                            <img src="img/about-me.jpg" alt="Benjamin Fontannaz at the office" data-stellar-background-ratio="0.5">
+                        </div>
+                    </div> -->
+                    <!-- about-box end -->
+                <!-- </div> -->
+                <!-- end about me section-->
+    
+                <!-- iMAC Mockup section-->
+                <div class="container">
+                    <div class="row">
+                        <div class="mockup-applebundle d-none d-sm-block d-md-none mb-3 padding-30px-left" data-overlay-dark="0">
+                            <div class="mockup-scene">
+                                <img src="./img/Mockups/AppleDevicesBundleMockup_002_cropped_iMAC@0.25x.png" alt="iMAC photo" class="bundle-imac mockups">
+                                <img src="./img/Mockups/AppleDevicesBundleMockup_002_cropped_MacBookPro@0.25x.png" alt="MacBookPro photo" class="bundle-macbookpro  mockups bundle-scroll-1">
+                                <img src="./img/Mockups/AppleDevicesBundleMockup_002_cropped_iPad@0.25x.png" alt="iPad photo" class="bundle-ipad mockups bundle-scroll-2">
+                                <img src="./img/Mockups/AppleDevicesBundleMockup_002_cropped_iPhone@0.25x.png" alt="iPhone photo" class="bundle-iphone mockups bundle-scroll-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- iPhone Mockup section-->
+                <div class="mockup-iphone mockups d-block d-sm-none" data-overlay-dark="0" >
+                    <img src="./img/Mockups/iphone11-mockup_Ben_45deg_005_9perOpacity@0.25xT.png" alt="Benjamin Fontannaz responsive design photo" data-stellar-background-ratio="0.5" class="mockups about-scroll-4">
+                </div>
+    
+                <!-- end about me Mockup section-->
+    
+                <!-- start skill section-->
+                <!-- start skill section-->
+                <div class="row px-2 px-sm-0">
+                    <div class="col-12 padding-250px-left sm-padding-0px-left xs-padding-10px-left">
+                        <h4 class="alt-font xs-font-size22 md-font-size28 about-h4 about-scroll-5">Benjamin Fontannaz</h4>
+                        <p class="xs-para1">Strategy Consultant | <span class="d-none d-sm-inline-block">Enterprise &amp; Solution Architect |</span><span><img src="./img/LogoStudies/international-institute-for-management-development-imd-vector-logo-NO-SLOGAN.png" class="imd-logo"></span>eMBA</p>
+                        <!-- <p class="xs-para1 d-block d-sm-none">Enterprise &amp; Solution Architect<br>Strategy Consultant | eMBA</p> -->
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <h1 class="banner-headline clip no-margin align-self-end">
+                            <span class="blc">I'm </span>
+                                <span class="banner-words-wrapper">
+                                <b class="is-visible font-weight-600">Ben too</b>
+                                <b class="font-weight-600">a Strategy Consultant too</b>
+                                <b class="font-weight-600">a Startup Expert too</b>
+                                <b class="font-weight-600">a Solution Architect too</b>
+                                <b class="font-weight-600">an Enterprise Architect too</b>
+                                <b class="font-weight-600">a Workplace Specialist too</b>
+                                <b class="font-weight-600">a UI/UX Designer too</b>
+                                <b class="font-weight-600">an Analytics Enthusiast too</b>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- START left and right Scrolling Banner Container -->
+                <div class="container">
+                    <div class="row">
+                        <div class="text-center caption position-absolute">
+                            <h1 class="banner-headline clip no-margin align-self-end">
+                                <span class="blc">I'm </span>
+                                    <span class="banner-words-wrapper">
+                                    <b class="is-visible font-weight-600">Ben</b>
+                                    <b class="font-weight-600">a Strategy Consultant</b>
+                                    <b class="font-weight-600">a Startup Expert</b>
+                                    <b class="font-weight-600">a Solution Architect</b>
+                                    <b class="font-weight-600">an Enterprise Architect</b>
+                                    <b class="font-weight-600">a Workplace Specialist</b>
+                                    <b class="font-weight-600">a UI/UX Designer</b>
+                                    <b class="font-weight-600">an Analytics Enthusiast</b>
+                                </span>
+                            </h1>
+                            <div class="margin-10px-top margin-30px-bottom sm-margin-10px-top sm-margin-20px-bottom px-3">
+                                <p class="introduction" id="introduction-1">I support startups and SMBs with their digital strategy, business development, innovation and technology choices.</p>
+                                <p class="introduction" id="introduction-2">I support startups and SMBs with their digital strategy, business development, innovation and technology choices. I assist in the design and integration of new technologies to best support your strategy.</p>
+                                <!-- <p class="d-none d-xl-block">I assist in the alignment, design and integration of technologies to support companies' strategy. I evaluate startups and advise SMBs on their strategy, business development and technology choices. I'm also an analytics, UI & UX development and graphic design enthusiast.</p> -->
+                            </div>
+                            <!-- <p class="margin-30px-bottom sm-margin-20px-bottom xs-display-none">I'm also an Analytics, Graphical and UI|UX design Enthusiast.</p> -->
+                            <div class="d-inline-block xs-margin-0px-top">
+
+                                <a href="http://www.linkedin.com/in/fontannazbenjamin" target="_blank"><i class="fab fa-linkedin-in text-light-gray mx-2 mx-md-4"></i></a>
+
+                                <a href="https://www.meetup.com/members/305299099/" target="_blank"><i class="fab fa-meetup text-light-gray mx-2 mx-md-4"></i></a>
+
+                                <a href="https://twitter.com/BenFontannaz" target="_blank"><i class="fab fa-twitter text-light-gray mx-2 mx-md-4"></i></a>
+
+                                <!-- <a href="http://api.whatsapp.com/send?phone=0041763829075" target="_blank"><i class="fab fa-whatsapp text-light-gray mx-2 mx-md-4" style="font-size: 20px;"></i></a> -->
+
+                                <a href="skype:airben1971?chat" target="_blank"><i class="fab fa-skype text-light-gray mx-2 mx-md-4"></i></a>
+
+                                <a href="https://wa.me/41763829075?text=Fontannaz%20Consulting%20Request%20-%20" target="_blank"><i class="fab fa-whatsapp text-light-gray mx-2 mx-md-4 d-xs-block d-md-none"></i></a>
+
+                                <a href="mailto:benjamin@fontannazconsulting.com?Subject=Question or Consulting Service Enquiry"><i class="fas fa-envelope text-light-gray mx-2 mx-md-4"></i></a>
+                                
+                                <a href="tel:+4179-651-2203" data-toggle="tooltip" title="+41796512203"><i class="fas fa-mobile-alt text-light-gray mx-2 mx-md-4"></i></a>
+                                
+                                <!-- <a href="javascript:void(0);"><i class="fab fa-dribbble text-light-gray mx-2 mx-md-3" style="font-size: 18px;"></i></a> -->
+                            </div>
+                        
+                        </div>
+            
+                    </div>
+
+                </div>
+                <!-- <div class="row px-2 px-sm-0">
+                    <div class="col-12 padding-250px-left sm-padding-0px-left xs-padding-10px-left">
+                        <div>
+                            <p class="para3 d-none d-sm-block mb-3"><span class="area-expertise">Expertise in</span>  Strategy | Business Development | Finance | Innovation | New Technologies | Enterprise Architecture | Solution Architecture | Digital Workplace | Analytics | Branding | UX &amp; UI | Responsive Web Design | Digital Marketing | Sales</p>
+                        </div>
+                    </div>
+                </div> -->
+    
+                <div class="row px-2 px-sm-0 mx-0 mx-md-2 about-para-margin">
+                    <div class="col-12 padding-250px-left sm-padding-0px-left xs-padding-10px-left">
+                        <div>
+                            <p class="about-para d-none d-sm-block">
+                                <span class="para4">15+ years’ experience</span> designing, deploying and leading digital workplace projects to be successfully delivered upon agreed solutions for SMEs to MNCs.
+                            </p>
+                            <p class="about-para d-none d-sm-block">
+                                <span class="para4">4+ years’ experience</span> in entrepreneurship, strategy, business development, innovation, new technologies, startups and consulting services. 
+                            </p>
+                            <p class="about-para d-block">
+                                <span class="para4">Today,</span> while staying up to date with the latest technologies, <u>my dual profile (<i>business & technology</i>)</u> enables me to deliver expertise on a wide spectrum, going from digital strategy, business development, valuation and investment in startups, innovation, up to new technologies, enterprise and solutions architecture, digital workplace, branding, user experience (UX), user interface (UI) and responsive web design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- <div class="row px-2 px-sm-0">
+                    <div class="col-12 padding-250px-left sm-padding-0px-left xs-padding-10px-left">
+                        <div>
+                            <p class="para3 d-none d-sm-block mb-3"><span class="para4">Expertise in</span>  Strategy | Business Development | Finance | Innovation | New Technologies | Enterprise Architecture | Solution Architecture | Digital Workplace | Analytics | Branding | UX &amp; UI | Responsive Web Design | Digital Marketing | Sales
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+    
+                <!-- <div class="row padding-250px-left md-padding-20px-left xs-padding-15px-left"> -->
+                <div class="row">
+    
+                    <div class="certified">
+        
+                        <div class="d-flex flex-row flex-wrap margin-10px-top certified mx-3 mx-sm-4 mx-md-3 justify-content-center certified__logo">
+                            <img src="./img/LogoCertified/Certified-logo-grey-Togaf_004@1.0x.png" alt="togaf logo" class="togaf cert">
+                            <img src="./img/LogoCertified/Certified-logo-grey-ITIL_004@1.0x.png" alt="itil logo" class="itil cert">
+                            <img src="./img/LogoCertified/Certified-logo-grey-Microsoft_006@1.0x.png" alt="microsoft logo" class="microsoft cert">                
+                            <img src="./img/LogoCertified/Certified-logo-grey-VMware_005@1.0x.png" alt="vmware logo" class="vmware cert">
+                            <img src="./img/LogoCertified/Certified-logo-grey-Citrix_004@1.0x.png" alt="citrix logo" class="citrix cert">
+    
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <!-- <div class="row padding-250px-left md-padding-20px-left xs-padding-15px-left"> -->
+                <div class="row about-me-height px-2 px-sm-0">
+    
+                    <div class="col-12 padding-250px-left sm-padding-0px-left xs-padding-10px-left align-top d-none d-lg-block">
+                        <!-- <div class="padding-20px-lr sm-no-padding"> -->
+                        <div class="lasp-p certifs">
+                            <div class="font-size15 xs-font-size14">
+                                <p class="pro-fes pro-fes2 pt-5 mt-5 about-scroll-6">
+                                    Professional Studies:
+                                </p>
+                                <div class="d-flex flex-row flex-wrap mx-4 mx-md-3 justify-content-center md-justify-content about-scroll-7">
+                                    <img src="./img/LogoProStudies/Wharthon-1000pxx500px_004_left@0.25x.png" alt="wharthon logo" class="wharthon-pro pro-studies">
+                                    <img src="./img/LogoProStudies/University of Helsinki -1000pxx500px_002_center@0.25x.png" alt="helsinki logo" class="helsinki-pro pro-studies">
+                                    <img src="./img/LogoProStudies//Imd-1000pxx500px_006_Center@0.25x.png" alt="imd logo" class="imd-pro pro-studies">
+                                    <img src="./img/LogoProStudies/University of Groningen-1000pxx500px_006_center@0.25x.png" alt="groningen logo" class="groningen-pro pro-studies">
+                                    <img src="./img/LogoProStudies/BID-1000pxx500px_006_center@0.25x.png" alt="bid logo" class="bid-pro pro-studies">
+                                    <img src="./img/LogoProStudies/SwissArmedForcesCollege-1000pxx500px_010_center@0.25x.png" alt="swissarmed logo" class="swissarmed-pro pro-studies">
+                                    <img src="./img/LogoProStudies/ISACA-COBIT2019-1000pxx500px_001@0.25x.png" alt="cobit2019 logo" class="cobit2019-pro pro-studies">
+                                    <img src="./img/LogoProStudies/ISACA-COBIT5-1000pxx500px_001@0.25x.png" alt="cobit5 logo" class="cobit5-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Togaf-9.2-1000pxx500px_004_center@0.25x.png" alt="togaf logo" class="togaf-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Open2Study-1000pxx500px_006_center@0.25x.png" alt="open2study logo" class="open2study-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Archimate-3.0-1000pxx500px_002_center@0.25x.png" alt="archimate logo" class="archimate-pro pro-studies">
+                                    <img src="./img/LogoProStudies/IT4IT-1000pxx500px_001_center@0.25x.png" alt="it4it logo" class="it4it-pro pro-studies d-none">
+                                    <img src="./img/LogoProStudies/UML-1000pxx500px_003_center@0.25x.png" alt="uml logo" class="uml-pro pro-studies">
+                                    <img src="./img/LogoProStudies/BPMN-2.0-1000pxx500px_002_center@0.25x.png" alt="bpmn logo" class="bpmn-pro pro-studies">
+                                    <img src="./img/LogoProStudies/PMI-PMP-1000pxx500px_003_center@0.25x.png" alt="pmi logo" class="pmi-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Jira-1000pxx500px_002_center@0.25x.png" alt="jira logo" class="jira-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Agile-1000pxx500px_006@0.25x.png" alt="agile logo" class="agile-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Scrum-1000pxx500px_006@0.25x.png" alt="scrum logo" class="scrum-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Scrumban-1000pxx500px_003@0.25x.png" alt="scrum logo" class="scrum-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Kanban-1000pxx500px_002@0.25x.png" alt="kanban logo" class="kanban-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Salesforce-1000pxx500px_005@0.25x.png" alt="salesforce admin logo pro-studies" class="salesforce-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Salesforce-Eintein-1000pxx500px_001@0.25x.png" alt="salesforce einstein admin logo" class="salesforce-einstein-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Salesforce-Tableau-1000pxx500px_002@0.25x.png" alt="salesforce tableau admin logo" class="salesforce-tableau-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Apple-1000pxx500px_004@0.25x.png" alt="macosx support logo" class="macosx-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Dell-1000pxx500px_002@0.25x.png" alt="dell tools logo" class="delltools-pro pro-studies">
+                                    <img src="./img/LogoProStudies/StationX-1000pxx500px_001@0.25x.png" alt="stationx logo" class="stationx-pro pro-studies">
+                                    <img src="./img/LogoProStudies/VBScript-1000pxx500px_001@0.25x.png" alt="vbscript logo" class="vbscript-pro pro-studies"> 
+                                    <img src="./img/LogoProStudies/PowerShell-1000pxx500px_001@0.25x.png" alt="powershell logo" class="powershell-pro pro-studies"> 
+                                    <img src="./img/LogoProStudies/HTML-1000pxx500px_001@0.25x.png" alt="html logo" class="html-pro pro-studies">
+                                    <img src="./img/LogoProStudies/CSS-1000pxx500px_001@0.25x.png" alt="css logo" class="css-pro pro-studies">
+                                    <img src="./img/LogoProStudies/JS-1000pxx500px_002@0.25x.png" alt="javascript logo" class="js-pro pro-studies">
+                                    <img src="./img/LogoProStudies/jQuery-1000pxx500px_001_center@0.25x.png" alt="jquery logo" class="jquery-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Sass-1000pxx500px_002@0.25x.png" alt="sass logo" class="sass-pro pro-studies">
+                                    <img src="./img/LogoProStudies/React.js-1000pxx500px_001@0.25x.png" alt="reactjs logo" class="reactjs-pro pro-studies d-none">
+                                    <img src="./img/LogoProStudies/Angular.js-1000pxx500px_001@0.25x.png" alt="angularjs logo" class="angularjs-pro pro-studies d-none">
+                                    <img src="./img/LogoProStudies/Node.js-1000pxx500px_001@0.25x.png" alt="nodejs logo" class="nodejs-pro pro-studies">
+                                    <img src="./img/LogoProStudies/Python-1000pxx500px_001@0.25x.png" alt="python logo" class="python-pro pro-studies d-none">
+                                    <img src="./img/LogoProStudies/R-1000pxx500px_001@0.25x.png" alt="r logo" class="r-pro pro-studies d-none">
+                                    <img src="./img/LogoProStudies/Flutter-1000pxx500px_001@0.25x.png" alt="flutter logo" class="flutter-pro pro-studies d-none">
+                                    <img src="./img/LogoProStudies/Bootstrap4-1000pxx500px_001@0.25x.png" alt="bootstrap logo" class="bootstrap-pro pro-studies">
+                                    <img src="./img/LogoProStudies/WordPress-1000pxx500px_001@0.25x.png" alt="wordpress logo" class="wordpress-pro pro-studies">
+                                    <img src="./img/LogoProStudies/UX-UI-1000pxx500px_001@0.25x.png" alt="ux ui logo" class="ux-ui-pro pro-studies">   
+                                    <img src="./img/LogoProStudies/AdobeCreativeSuite-1000pxx500px_002@0.25x.png" alt="adobe cloud logo" class="adobe-pro pro-studies">
+                                </div>
+                                <p class="pro-fes pro-fes2 pt-5 mt-5 mx-0 mx-md-3 d-block about-scroll-8">
+                                    My Tools:
+                                </p>
+                                <div class="d-flex flex-row flex-wrap mx-0 mx-md-3 justify-content-center about-scroll-9">
+                                    <img src="./img/LogoTools/strategy/Brain_002@1.0x.png" alt="Brain logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/Coffee_001@1.0x.png" alt="Coffee logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/Positive_Thinking_002@1.0x.png" alt="Positive Thinking logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/Resilience_001@1.0x.png" alt="Resilience logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/Togaf-ADM_002@1.0x.png" alt="Togaf ADM logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/Togaf-Archimate_003@1.0x.png" alt="Togaf Archimate logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/Togaf-Capability_002@1.0x.png" alt="Togaf Capability Matrix logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/Strategy-Map_003@1.0x.png" alt="Strategy Map logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/MM_001@1.0x.png" alt="Mind Map logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/BCC_001@1.0x.png" alt="Business Context Canvas logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/BMC_001@1.0x.png" alt="Business Model Canvas logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/VPC_001@1.0x.png" alt="Value Proposition Canvas logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/TC_001@1.0x.png" alt="Team Canvas logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/CJM_001@1.0x.png" alt="Customer Journey Map logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/UEM_001@1.0x.png" alt="User Experience Map logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/UIC_001@1.0x.png" alt="User Interaction Canvas logo" class="tools">
+                                    <img src="./img/LogoTools/strategy/SB_001@1.0x.png" alt="Service Blue Print logo" class="tools">
+                                    <img src="./img/LogoTools/MS-Word_001@1.0x.png" alt="MS Word logo" class="tools">
+                                    <img src="./img/LogoTools/MS-Excel_001@1.0x.png" alt="MS Excel logo" class="tools">
+                                    <img src="./img/LogoTools/MS-PowerPoint_001@1.0x.png" alt="MS PowerPoint logo" class="tools">
+                                    <img src="./img/LogoTools/MS-Outlook_001@1.0x.png" alt="MS Outlook logo" class="tools">
+                                    <img src="./img/LogoTools/MS-OneNote_002@1.0x.png" alt="MS OneNote logo" class="tools">
+                                    <img src="./img/LogoTools/MS-Publisher_001@1.0x.png" alt="MS Publisher logo" class="tools">   
+                                    <img src="./img/LogoTools/MS-Project_001@1.0x.png" alt="MS Project logo" class="tools">
+                                    <img src="./img/LogoTools/MS-Visio_001@1.0x.png" alt="MS Visio logo" class="tools">
+                                    <img src="./img/LogoTools/MS-Skype_001@1.0x.png" alt="MS Skype logo" class="tools">
+                                    <img src="./img/LogoTools/MS-OneDrive_001@1.0x.png" alt="MS OneDrive logo" class="tools">
+                                    <img src="./img/LogoTools/GoogleDrive_001@1.0x.png" alt="Google Drive logo" class="tools">
+                                    <img src="./img/LogoTools/Adobe-Acrobat_001@1.0x.png" alt="adobe acrobat logo" class="tools">             
+                                    <img src="./img/LogoTools/Adobe-Ps_001@1.0x.png" alt="adobe photoshop logo" class="tools">
+                                    <img src="./img/LogoTools/Adobe-Ai_001@1.0x.png" alt="adobe illustrator logo" class="tools">
+                                    <img src="./img/LogoTools/Adobe-Id_001@1.0x.png" alt="adobe indesign logo" class="tools">
+                                    <img src="./img/LogoTools/Adobe-Ae_001@1.0x.png" alt="adobe after effects logo" class="tools">
+                                    <img src="./img/LogoTools/Adobe-Pr_001@1.0x.png" alt="adobe premiere logo" class="tools">
+                                    <img src="./img/LogoTools/Adobe-Xd_001@1.0x.png" alt="adobe experience design logo" class="tools">
+                                    <img src="./img/LogoTools/skyfonts_001@1.0x.png" alt="Skyfonts logo" class="tools">
+                                    <img src="./img/LogoTools/Archi_002@1.0x.png" alt="archi logo" class="tools">
+                                    <img src="./img/LogoTools/StarUML_001@1.0x.png" alt="StarUML logo" class="tools">
+                                    <img src="./img/LogoTools/Draw.io_002@1.0x.png" alt="Draw.io logo" class="tools">
+                                    <img src="./img/LogoTools/SnagtIT_001@1.0x.png" alt="SnagIT logo" class="tools">
+                                    <img src="./img/LogoTools/Bear_001@1.0x.png" alt="Bear logo" class="tools">
+                                    <img src="./img/LogoTools/JIRA_001@1.0x.png" alt="Toggl logo" class="tools">
+                                    <img src="./img/LogoTools/Trello_001@1.0x.png" alt="Toggl logo" class="tools">
+                                    <img src="./img/LogoTools/Things_001@1.0x.png" alt="Things logo" class="tools">
+                                    <img src="./img/LogoTools/Toggl_001@1.0x.png" alt="Toggl logo" class="tools">
+                                    <img src="./img/LogoTools/Anki_001@1.0x.png" alt="Anki logo" class="tools">
+                                    <img src="./img/LogoTools/Quicken-2020_001@1.0x.png" alt="Quicken Intuit logo" class="tools">
+                                    <img src="./img/LogoTools/VisualStudioCode_001@1.0x.png" alt="Visual Studio Code logo" class="tools">
+                                    <img src="./img/LogoTools/AtomEditor_001@1.0x.png" alt="Atom Editor logo" class="tools">
+                                    <img src="./img/LogoTools/SublimeText3_001@1.0x.png" alt="Sublime Text 3 logo" class="tools">
+                                    <img src="./img/LogoTools/Expresso_001@1.0x.png" alt="Expresso logo" class="tools">
+                                    <img src="./img/LogoTools/Git_002@1.0x.png" alt="Git logo" class="tools">
+                                    <img src="./img/LogoTools/GitHub_001@1.0x.png" alt="GitHub logo" class="tools">
+                                    <img src="./img/LogoTools/FileZilla_001@1.0x.png" alt="FileZilla logo" class="tools">
+                                    <img src="./img/LogoTools/Prepros_001@1.0x.png" alt="Prepros logo" class="tools">
+                                    <img src="./img/LogoTools/Mamp_001@1.0x.png" alt="Mamp logo" class="tools">
+                                    <img src="./img/LogoTools/ServerPress_001@1.0x.png" alt="ServerPress logo" class="tools">   
+                                    <img src="./img/LogoTools/WordPress_001@1.0x.png" alt="WordPress logo" class="tools">
+                                    <img src="./img/LogoTools/MS-SqlServer-003@1.0x.png" alt="MS Sql Server  logo" class="tools">
+                                    <img src="./img/LogoTools/MySQL-002@1.0x.png" alt="MySql logo" class="tools">
+                                    <img src="./img/LogoTools/PostGreSQL-001@1.0x.png" alt="PostGre Sql logo" class="tools">
+                                    <img src="./img/LogoTools/MongoDB-001@1.0x.png" alt="MongoDB logo" class="tools">
+                                    <img src="./img/LogoTools/VMware-Fusion_001@1.0x.png" alt="VMware Fusion logo" class="tools">
+                                    <img src="./img/LogoTools/TeamViewer_001@1.0x.png" alt="TeamViewer logo" class="tools">
+                                    <img src="./img/LogoTools/LogMeIn_001@1.0x.png" alt="LogMeIn TSX logo" class="tools">
+                                    <img src="./img/LogoTools/Royal-TSX_001@1.0x.png" alt="Royal TSX logo" class="tools">
+                                    <img src="./img/LogoTools/Slack_001@1.0x.png" alt="Slack logo" class="tools">
+                                    <img src="./img/LogoTools/CaffeineApp-001@1.0x.png" alt="Caffeine App logo" class="tools">
+                                    <img src="./img/LogoTools/ArchiveApp-003@1.0x.png" alt="Archive App logo" class="tools">
+                                    <img src="./img/LogoTools/MacPassApp-003@1.0x.png" alt="MacPass App logo" class="tools">
+                                    <img src="./img/LogoTools/KeepassXApp-001@1.0x.png" alt="KeepassX App logo" class="tools">
+                                    <img src="./img/LogoTools/ExpressVPN-001@1.0x.png" alt="ExpressVPN logo" class="tools">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            <!-- end skill section-->
+            <!-- end skill section-->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <div class="row">
                     <div class="col-1-of-2">
@@ -151,180 +711,15 @@
             </section>
 
             <!-- 
-            SECTION TOURS --------------------------------------------- -->
-            <section class="section-tours" id="section-tours">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                        Most popular tours
-                    </h2>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__side card__side--front card__side--front-1">
-                                <div class="card__picture card__picture--1">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--1">The Sea Explorer</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li>3 day tour</li>
-                                        <li>Up to 30 people</li>
-                                        <li>2 tour guides</li>
-                                        <li>Sleep in cozy hotels</li>
-                                        <li>Difficulty: very easy</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">Only</p>
-                                        <p class="card__price-value">$297</p>
-                                    </div>
-                                    <a href="#popup" class="btn btn--white">Book now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__side card__side--front card__side--front-2">
-                                <div class="card__picture card__picture--2">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--2">The Forest Hiker</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li>7 days tour</li>
-                                        <li>Up to 40 people</li>
-                                        <li>6 tour guides</li>
-                                        <li>Sleep in provided tents</li>
-                                        <li>Difficulty: medium</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card__side card__side--back card__side--back-2">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">Only</p>
-                                        <p class="card__price-value">$497</p>
-                                    </div>
-                                    <a href="#popup" class="btn btn--white">Book now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__side card__side--front card__side--front-3">
-                                <div class="card__picture card__picture--3">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--3">The Snow Adventurer</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li>5 days tour</li>
-                                        <li>Up to 15 people</li>
-                                        <li>3 tour guides</li>
-                                        <li>Sleep in provided tents</li>
-                                        <li>Difficulty: hard</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card__side card__side--back card__side--back-3">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">Only</p>
-                                        <p class="card__price-value">$897</p>
-                                    </div>
-                                    <a href="#popup" class="btn btn--white">Book now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="u-center-text u-margin-top-huge">
-                    <a href="#" class="btn btn--green">Discover all tours</a>
-                </div>
-
-            </section>
-
-            <!-- 
-            SECTION STORIES --------------------------------------------- -->
-            <section class="section-stories" id="section-stories">
-
-                <div class="bg-video">
-                    <video class="bg-video__content" autoplay muted loop>
-                        <source src="./img/video.mp4" type="video/mp4">
-                        <source src="./img/video.webm" type="video/webm">
-                        Your browser is not supported!
-                    </video>
-                </div>
-
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                        We make people genuinely happy
-                    </h2>
-                </div>
-
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__shape">
-                            <img src="./img/nat-8.jpg" alt="Person on a tour" class="story__image">
-                            <figcation class="story__caption">Mary Smith</figcation>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary">I had the best week ever with my family</h3>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio harum iste incidunt in quos aperiam dolorum sint placeat nesciunt eaque nihil quasi iure accusantium aut autem voluptatibus tempore sapiente libero itaque rerum atque, aliquid neque! Perferendis, laboriosam eligendi. Amet!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="story">
-                        <figure class="story__shape">
-                            <img src="./img/nat-9.jpg" alt="Person on a tour" class="story__image">
-                            <figcation class="story__caption">Jack Wilson</figcation>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary">WOW ! My life is completly different now</h3>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio harum iste incidunt in quos aperiam dolorum sint placeat nesciunt eaque nihil quasi iure accusantium aut autem voluptatibus tempore sapiente libero itaque rerum atque, aliquid neque! Perferendis, laboriosam eligendi. Amet!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="u-center-text u-margin-top-huge">
-                    <a href="#" class="btn-text">Read all stories &rarr;</a>
-                </div>
-
-            </section>
-
-            <!-- 
             SECTION BOOK --------------------------------------------- -->
             <section class="section-book" id="section-book">
-                <div class="row">
+                
                     <div class="book">
                         <div class="book__form">
 
                             <div class="u-margin-bottom-medium">
                                 <h2 class="heading-secondary">
-                                    Start booking now 
+                                    Let's Discuss Your Needs
                                 </h2>
                             </div>
 
@@ -368,7 +763,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                
             </section>
 
         </main>
@@ -496,7 +891,24 @@
 
         <!-- 
         Scripts ---------------------------------------------------------- -->
+        <!-- Parallax Window Required Java script -->
+        <script src="./js/parallax.min.js"></script>
+        <script src="./js/jquery-3.1.0.slim.min.js"></script>
+        <script src="./js/jquery-3.2.1.min.js"></script>
+        <script src="./js/core.min.js"></script>
+
+        <!-- <script src="./js/preloader.js"></script> -->
+
+
+
+        <script src="./js/close-nav.js"></script>
+        <!-- <script src="./js/functions.js"></script> -->
         <script src="./js/scripts.js"></script>
+
+
+        <!-- contact form scripts -->
+        <script src="./js/mailform/jquery.form.min.js"></script>
+        <script src="./js/mailform/jquery.rd-mailform.min.c.js"></script>
         
     </body>
     

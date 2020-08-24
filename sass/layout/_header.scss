@@ -2,62 +2,759 @@
 HEADER ------------------------------------------------------------------------ */
 
 .header {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)), 
-        url("../img/hero-small.jpg");
+    height: 115vh;
+    background-image: url("../img/header/officeEmpty/LYCS_BLUR_1920x1080_003_BLUR-EMPTY@0.5x.png");
+
+    // background-image: linear-gradient(
+    //     to right bottom,
+    //     rgba($color-primary-light, 0.1),
+    //     rgba($color-primary-dark, 0.2)), 
+    //     url("../img/header/officeempty/LYCS_BLUR_1920x1080_003_BLUR-EMPTY@0.5x.png");
+
     background-size: cover;
     background-position: center;
     position: relative;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
     /* clip-path: polygon(0% 0%, 50% 10%, 100% 0%, 100% 90%, 50% 100%, 0% 90%); Chevron downward */
 
     // Media queries should always be indicated in em and NOT in px (safari is not supporting them)
     // divide px by 16 to get the em value here: (600px / 16 =  37.5em) and (2000px / 16 = 125em) 
+    overflow: hidden;
+    z-index:30;
+
     @media  only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
             only screen and (min-width: 125em) {
-            background-image: linear-gradient(
-                to right bottom,
-                rgba($color-primary-light, 0.8),
-                rgba($color-primary-dark, 0.8)), 
-                url("../img/hero.jpg");
+            background-image: url("../img/header/officeempty/LYCS_BLUR_1920x1080_003_BLUR-EMPTY.png");
     }
 
     @include respond(phone) {       // width < 600?
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        height: 110vh;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
     }
 
     &__logo-box {
         position: absolute;
-        top: 3.5rem;
-        left: 3.5rem;
+        top: 5rem;
+        left: 5rem;
+        z-index: 4;
 
         @include respond(tab-port) {    // width < 900?
-            top: 3rem;
-            left: 3rem;
-        }
-
-        @include respond(phone) {       // width < 600?
-            top: 2.5rem;
+            top: 2rem;
             left: 2rem;
         }
 
+        @include respond(phone) {       // width < 600?
+            top: 1rem;
+            left: 2rem;
+        }
     }
     
+
     &__logo {
-        height: 3.5rem;
+        color: $color-white;
+        height: 15rem;
+        opacity: .65;
+
+        @include respond(tab-port) {    // width < 900?
+            height: 7rem;
+        }
+
+        @include respond(phone) {       // width < 600?
+            height: 7rem;
+        }
+
     }
 
     &__text-box {
         position: absolute;
+        width: 100%;
         top: 40%;
         left: 50%;
         /* background-color: rgba(255, 0, 0, 0.5); */
         transform: translate(-50%, -50%);
         text-align: center;
+        z-index: 5;
+    }
+
+
+    //  70em = 700px    105 112 119 126 133 140 147 154 
+    //  120em = 1200px  180 192 204 216 228 240 252 264
+
+    &__ben-only {
+        background-color: yellow;
+        width: 700px;  //  70em = 700px     77  84  91  98  105
+        height: 1200px; //  120em = 1200px   132 144 156 168 180   
+        scale: (1);
+        background-image: url(../img/header/BenOnly@700x1200.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: absolute;
+        top: 10vh;
+        right: -5vw;
+        // margin-left: 0rem;
+        z-index: 0;
+        overflow: hidden;
+        
+        // animation-name: fadeInLeftBig;
+        // animation-timing-function: ease-out;
+        // animation-delay: 0.8s;
+        // animation-duration: 1s;
+
+        animation: fadeInLeftBig 1.6s ease-out 1s; // animation - name / duration / function / delay
+        animation-fill-mode: backwards; // set the opacity to zero prior the animation starts with a delay when configured
+        animation-iteration-count: 1;
+
+
+        
+
+        @include respond(tab-l-land) {  // MAX 1340px x 1030px
+            background-color: red;
+            width: 154em;     
+            height: 264em; 
+            scale: 1.3;
+            top: 38vh;
+            right: -31vw;
+        }
+
+        @include respond(tab-m-land) {  // MAX 1290px x 840px
+            background-color: violet;
+            scale: 1.6;
+            top: 50vh;
+            right: -31vw;
+        }
+
+        @include respond(tab-l) {   // MAX 1030px x 1370px
+            background-color: red;
+            scale: 1.7;
+            top: 65vh;
+            right: -31vw;
+        }
+
+        @include respond(tab-s-land) {   // MAX 970px x 610px
+            background-color: orangered;
+            scale: 1.5;
+            top: 50vh;
+            right: -31vw;
+        }
+
+        @include respond(phone-l-land) {   // MAX 910px x 425px
+            background-color: seagreen;
+            scale: .55;
+            top: -145vh;
+            right: -75vw;
+        }
+
+        @include respond(desk-xs-1) {   // MAX 900px
+            background-color: black;
+            scale: 1.7;
+            top: 70vh;
+            left: -30vw;
+        }
+
+        @include respond(tab-m) {   // MAX 840px x 1290px
+            background-color: violet;
+            scale: 1.2;
+            top: 25vh;
+            right: -60vw;
+        }       
+
+        @include respond(phone-land) {  // MAX 820px x 395px
+            background-color: steelblue;
+            scale: .55;
+            top: -155vh;
+            right: -75vw;
+        }  
+
+        @include respond(phone-m-land) {  // MAX 750px x 425px
+            background-color: grey;
+            scale: .55;
+            top: -140vh;
+            right: -85vw;
+        }
+
+        @include respond(phone-xs-land) {  // MAX 750px x 370px
+            background-color: lightgreen;
+            scale: .55;
+            top: -140vh;
+            right: -85vw;
+        }
+
+        @include respond(phone-s-land) {  // MAX 680px x 390px
+            background-color: olive;
+            scale: .55;
+            top: -175vh;
+            right: -95vw;
+        }
+
+        @include respond(tab-s) {  // MAX 610px x 970px
+            background-color: orangered;
+            scale: 1;
+            top: 8vh;
+            right: -90vw;
+        }
+
+        @include respond(desk-xs-2) {  // MAX 600px
+            background-color: darkgrey;
+            scale: 1.7;
+            top: 70vh;
+            left: -50vw;
+        }
+
+        @include respond(phone-xxs-land) {  // MAX 580px x 330px
+            background-color: green;
+            scale: .40;
+            top: -240vh;
+            right: -115vw;
+        }
+
+        @include respond(phone-l) {  // MAX 425px x 910px
+            background-color: seagreen;
+            scale: 1;
+            top: 7vh;
+            right: -145vw;
+
+        }
+
+        @include respond(phone-m) {  // MAX 425px x 750px
+            background-color: grey;
+            scale: .95;
+            top: -5vh;
+            right: -146vw;
+        }
+
+        @include respond(desk-xs-3) {  // MAX 400px
+            background-color: black;
+            scale: 1.7;
+            top: 70vh;
+            left: -50vw;
+        }
+
+        @include respond(phone) {   // MAX 395px x 820px
+            background-color: steelblue;
+            scale: 1;
+            top: 8vh;
+            right: -55vw;
+        }
+
+        @include respond(phone-s) {  // MAX 390px x 680px
+            background-color: olive;
+            scale: .9;
+        }
+
+        @include respond(phone-xs) {   // MAX 370px x 750px
+            background-color: lightgreen;
+            scale: .75;
+            top: -25vh;
+            right: -35vw;
+        }
+
+        @include respond(phone-xxs) {   // MAX 330px x 580px
+            background-color: green;
+            scale: .65;
+            top: -28vh;
+            right: -55vw;
+        }
+
+        @include respond(desk-s) {  // MIN 1250px x 760px
+            background-color: lightcyan;
+            scale: 1.35;
+            top: 45vh;
+            right: -26vw;
+        }
+
+        @include respond(desk-m) {  // MIN 1700px x 1100px
+            background-color: cyan;
+            scale: 1.35;
+            top: 25vh;
+            right: 0vw;
+        }
+
+        @include respond(desk-l) {  // MIN 1950px x 1050px
+            background-color: mediumaquamarine;
+            scale: 1.35;
+            top: 25vh;
+            right: 3vw;
+        }
+
+        @include respond(desk-xl) {    // MIN 2570px x 1050px
+            background-color: darkcyan; 
+            scale: 1.8;
+            top: 40vh;
+            right: 5vw;
+        }
+    }
+
+}
+
+.heading-primary {
+    color: $color-white;
+    backface-visibility: hidden; // for solving glitches at the end of an animation
+    margin-bottom: 6rem;
+    position: relative;
+    background-color: lightblue;
+
+    &--main {
+        display: block;
+        color: $color-white;
+        letter-spacing: 2rem;
+        font-size: 6rem;
+        animation-fill-mode: backwards; // set the opacity to zero prior the animation starts with a delay when configured
+
+        // animation: slideInLeft 1s ease-out 0.8s; // animation - name / duration / function / delay
+        // animation-iteration-count: 1;
+        // animation-fill-mode: backwards; // set the opacity to zero prior the animation starts with a delay when configured
+        
+
+        // animation-name: moveInLeft;
+        // animation-delay: 0.8s;
+        // animation-duration: 1s;
+        // animation-timing-function: ease-out;
+        // background-color: orangered;
+
+        
+        @include respond(tab-m) {    // width < 600?
+            letter-spacing: 1rem;
+            font-size: 5rem;         
+        }
+        
+        @include respond(phone) {    // width < 600?
+            letter-spacing: 1rem;
+            font-size: 5rem;         
+        }
+
+
+        &-1 {
+            // letter-spacing: 3.5rem;
+            // font-weight: 400;
+            // line-height: 0.5;
+            font-family: "Montserrat", sans-serif;
+            font-size: 4rem;
+            font-weight: 300;
+            position: absolute;
+            top: 3vh;
+            left: 12vw;
+            // transform: translate(-50%, -50%);
+            font-style: italic;
+            letter-spacing: 0.5rem;
+
+            // Animation header -1 
+            animation: fadeInLeft 1.1s ease-out 1.1s; // animation - name / duration / function / delay
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards; // set the opacity to zero prior the animation starts with a delay when configured
+
+
+            @include respond(tab-l-land) {  // MAX 1340px x 1030px
+                font-size: 4rem;
+                top: 2vh;
+                left: 3vw;  
+            }
+
+            @include respond(tab-m-land) {  // MAX 1290px x 840px
+                font-size: 4rem;
+                top: 7vh;
+                left: 3vw;
+            }
+
+            @include respond(tab-l) {   // MAX 1030px x 1370px
+                font-size: 4rem;
+                top: 10vh;
+                left: 3vw;
+            }
+
+            @include respond(tab-s-land) {   // MAX 970px x 610px
+
+            }
+
+            @include respond(phone-l-land) {   // MAX 910px x 425px
+
+            }
+
+            @include respond(desk-xs-1) {   // MAX 900px
+
+            }
+
+            @include respond(tab-m) {   // MAX 840px x 1290px
+                font-size: 3.5rem;
+                top: 17vh;
+                left: 3vw;
+            }       
+
+            @include respond(phone-land) {  // MAX 820px x 395px
+
+            }  
+
+            @include respond(phone-m-land) {  // MAX 750px x 425px
+
+            }
+
+            @include respond(phone-xs-land) {  // MAX 750px x 370px
+
+            }
+
+            @include respond(phone-s-land) {  // MAX 680px x 390px
+
+            }
+
+            @include respond(tab-s) {  // MAX 610px x 970px
+
+            }
+
+            @include respond(desk-xs-2) {  // MAX 600px
+
+            }
+
+            @include respond(phone-xxs-land) {  // MAX 580px x 330px
+
+            }
+
+            @include respond(phone-l) {  // MAX 425px x 910px
+
+            }
+
+            @include respond(phone-m) {  // MAX 425px x 750px
+
+            }
+
+            @include respond(desk-xs-3) {  // MAX 400px
+
+            }
+
+            @include respond(phone) {   // MAX 395px x 820px
+                font-size: 4rem;
+                top: 26vh;
+                left: 3vw;
+            }
+
+            @include respond(phone-s) {  // MAX 390px x 680px
+
+            }
+
+            @include respond(phone-xs) {   // MAX 370px x 750px
+                font-size: 3rem;
+                top: 27vh;
+                left: 3vw;
+            }
+
+            @include respond(phone-xxs) {   // MAX 330px x 580px
+                font-size: 2.5rem;
+                top: 27vh;
+                left: 3vw;
+            }
+
+            @include respond(desk-s) {  // MIN 1250px x 760px
+
+            }
+
+            @include respond(desk-m) {  // MIN 1700px x 1100px
+
+            }
+
+            @include respond(desk-l) {  // MIN 1950px x 1050px
+
+            }
+
+            @include respond(desk-xl) {    // MIN 2570px x 1050px
+                font-size: 4rem;
+                top: 0vh;
+                left: 10vw;
+            }
+
+        }
+
+        &-2 {
+            // text-transform: uppercase;
+            // letter-spacing: 3.0rem;
+            // font-weight: 400;
+            font-size: 7rem;
+            font-weight: 700;
+            position: absolute;
+            top: 10.5vh;
+            left: 20%;
+            // transform: translate(-50%, -50%);
+            text-align: center;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+
+            // Animation header -2 
+            animation: fadeInLeft 1.2s ease-out 1.5s; // animation - name / duration / function / delay
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards; // set the opacity to zero prior the animation starts with a delay when configured
+            
+
+
+            @include respond(tab-m-land) {    // width < 900?
+                font-size: 6.5rem;
+                top: 15vh;
+                left: 12vw;
+            }
+
+            @include respond(tab-m) {    // width < 900?
+                font-size: 5rem;
+                top: 22vh;
+                left: 8vw;
+            }
+    
+            @include respond(phone) {       // width < 600?
+                font-size: 5.2rem;
+                top: 31vh;
+                left: 10vw;
+            }
+
+            @include respond(phone-xs) {       // width < 600?
+                font-size: 4.5rem;
+                top: 32vh;
+                left: 10vw;
+            }
+
+            @include respond(phone-xxs) {       // width < 600?
+                font-size: 3.5rem;
+                top: 32vh;
+                left: 10vw;
+            }
+
+            @include respond(desk-xl) {       // width < 600?
+                font-size: 7rem;
+                top: 10vh;
+                left: 20vw;
+            }
+        }
+
+        &-3 {
+            // text-transform: uppercase;
+            // letter-spacing: 3.0rem;
+            // font-weight: 400;
+            color: $color-primary-dark;
+            font-size: 2rem;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 0.15rem;
+            text-transform: uppercase;
+            padding: 0.1rem 2.2rem;
+            margin: 0; 
+
+            animation: bounceInLeft 1.8s ease-out 1.6s; // animation - name / duration / function / delay
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards; // set the opacity to zero prior the animation starts with a delay when configured
+
+            // .display__desktop {
+            //     display: block;
+            // }
+            
+            @include respond(tab-m-land) {    // width < 1200?
+                font-size: 2.2rem;    
+            }
+
+            @include respond(tab-m) {    // width < 900?
+                font-size: 1.9rem;
+            }
+    
+            @include respond(phone) {       // width < 600?
+                font-size: 2rem;
+            }
+
+            @include respond(phone-s) {       // width < 600?
+                font-size: 1.5rem;
+            }
+
+            @include respond(phone-xs) {       // width < 600?
+                font-size: 1rem;
+            }
+
+            @include respond(desk-xl) {       // width < 600?
+                font-size: 2.2rem;
+            }
+        }
+
+        &-4 {
+            position: absolute;
+            top: 82.5vh;
+            left: 53%;
+            transform: translate(-50%, -50%);
+
+            backface-visibility: hidden; // for solving glitches at the end of an animation
+            z-index: 5;
+
+            @include respond(tab-m-land) {    // width < 1200?
+                top: 84vh;
+                left: 50vw;
+            }
+
+            @include respond(tab-m) {    // width < 900?
+                top: 86.5vh;
+                left: 50vw;
+            }
+    
+            @include respond(phone) {       // width < 600?
+                top: 89vh;
+                left: 50vw;
+            }
+
+            @include respond(phone-xs) {       // width < 600?
+                top: 88vh;
+                left: 50vw;
+            }
+
+            @include respond(phone-xxs) {       // width < 600?
+                top: 88vh;
+                left: 50vw;
+            }
+
+            @include respond(desk-xl) {       // width < 600?
+                top: 85vh;
+                left: 50vw;
+            }
+
+        }
+
+        /* 
+        animation-delay: 3s; 
+        animation-iteration-count: 3;
+        */
+    }
+
+    // &--sub {
+    //     color: $color-primary-dark;
+    //     display: block;
+    //     font-size: 2rem;
+    //     font-weight: 300;
+    //     letter-spacing: .96rem;
+    //     background-color: $color-white;
+    
+    //     animation: moveInRight 1s ease-in-out;
+
+    //     @include respond(phone) {    // width < 600?
+    //         letter-spacing: .5rem;        
+    //     }
+        
+    // }
+
+}
+
+.span-spacer3 h2 {
+    background-color: $color-grey-light-3;
+    position: absolute;
+    top: 20vh;
+    left: 24%;
+    // transform: translate(-50%, -50%);
+    width: auto;
+    
+
+
+    @include respond(tab-m-land) {    // width < 1200?
+        top: 23vh;
+        left: 25vw;
+    }
+
+    @include respond(tab-m) {    // width < 900?
+        top: 27.5vh;
+        left: 16vw;
+    }
+
+    @include respond(phone) {       // width < 600?
+        top: 36.5vh;
+        left: 15vw;
+    }
+
+    @include respond(phone-xs) {       // width < 600?
+        top: 36.5vh;
+        left: 15vw;
+    }
+
+    @include respond(phone-xxs) {       // width < 600?
+        top: 36.5vh;
+        left: 15vw;
+    }
+
+    @include respond(desk-xl) {       // width < 600?
+        top: 21vh;
+        left: 25vw;
+    }
+
+
+}
+
+.display__desktop {
+    display: block;
+
+    @include respond(tab-m-land) {    // width < 1200?
+        display: none;   
+    }
+
+    @include respond(tab-m) {    // width < 900?
+        display: none;
+    }
+
+    @include respond(phone) {       // width < 600?
+        display: none;
+    }
+
+    @include respond(phone-xs) {       // width < 600?
+        display: none;
+    }
+
+    @include respond(phone-xxs) {       // width < 600?
+        display: none;
+    }
+
+    @include respond(desk-xl) {       // width < 600?
+        display: block;
+    }
+
+}
+
+.display__tab-land {
+    display: none;
+
+    @include respond(tab-m-land) {    // width < 1200?
+        display: block;   
+    }
+
+    @include respond(tab-m) {    // width < 900?
+        display: block;
+    }
+
+    @include respond(phone) {       // width < 600?
+        display: none;
+    }
+
+    @include respond(phone-xs) {       // width < 600?
+        display: none;
+    }
+
+    @include respond(phone-xxs) {       // width < 600?
+        display: none;
+    }
+
+    @include respond(desk-xl) {       // width < 600?
+        display: none;
     }
 }
+
+
+.header__stack-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 125vh;
+    width: 100%;
+    background-image: linear-gradient(
+        to right top,
+        rgba($color-black, .5),
+        rgba($color-black, .4));
+
+    z-index: 3;
+
+}
+
+.btn--white-animated-header {
+    padding: 1.7rem 10rem;
+        
+    animation: moveInBottom 1s ease-in-out 2.6s; // .75s here indicates the start delay of the animation
+    animation-fill-mode: backwards; // set the opacity to zero prior the animation starts with a delay when configured
+        
+}
+
+
+
